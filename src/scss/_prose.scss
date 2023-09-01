@@ -1,4 +1,5 @@
 .prose {
+    padding-top: 70px;
     &__info {
         display: flex;
         align-items: center;
@@ -8,21 +9,32 @@
     }
     &__heading {
         flex: 1;
-        font-size: 43px;
+        font-size: 46px;
         font-weight: 600;
         line-height: 1.5;
         span {
-            color: #3c82f6;
+            color: $blue-color;
         }
     }
     &__image {
-        width: 200px;
-        height: 200px;
+        width: 230px;
+        height: 230px;
         object-fit: cover;
         border-radius: 100rem;
+        // border: 3px solid $blue-color;
+        // padding: 5px;
     }
     &__button {
         display: flex;
         gap: 20px;
     }
 }
+
+// @keyframes spinner {
+//     from {
+//         transform: rotate(0);
+//     }
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }

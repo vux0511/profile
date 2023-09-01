@@ -1,0 +1,74 @@
+.about {
+    &__title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 1;
+        padding: 30px 0 50px;
+        line-height: 1.4;
+        span {
+            display: block;
+        }
+    }
+    &__introduce {
+        color: $gray-color;
+        font-size: 18px;
+        p {
+            display: flex;
+            text-transform: none;
+        }
+    }
+    &__info {
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+    }
+    &__flag-vietnam {
+        width: 35px;
+        margin: 0 5px;
+    }
+    &__image {
+        border-radius: 0 10px 10px 0px;
+        width: 280px;
+        object-fit: cover;
+    }
+
+    &__technology {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        font-size: 18px;
+        &-info {
+            line-height: 1.8;
+            p {
+                padding: 10px;
+            }
+        }
+    }
+    &__link {
+        border-bottom: 1.5px solid $blue-color;
+    }
+    &__button {
+        margin-top: 20px;
+    }
+    &__education {
+        padding-top: 80px;
+        &-title {
+            font-size: 30px;
+            font-weight: 500;
+            padding-bottom: 30px;
+        }
+        &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 17px;
+            color: $gray-color;
+        }
+        &-line::before {
+            content: "- - - - - - - - - - - - - - -";
+            opacity: 0.3;
+        }
+    }
+}

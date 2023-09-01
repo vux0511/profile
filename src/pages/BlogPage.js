@@ -1,15 +1,15 @@
 import Header from "../components/Header";
-import About from "../components/About";
+import Blog from "../components/Blog";
 import Footer from "../components/Footer";
 
-function AboutPage() {
+function BlogPage() {
     return (
         <div className="container">
             <Header />
-            <About />
+            <Blog />
             <Footer />
         </div>
     );
 }
 
-export default AboutPage;
+export default BlogPage;
