@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    color: $black-color;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    text-transform: capitalize;
+    background-color: $background;
+    font-size: 16px;
+    font-family: $font-primary;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.button {
+    padding: 14px 30px;
+    border-radius: 100rem;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid transparent;
+    font-size: 18px;
+    font-family: $font-primary;
+    transition: all 0.2s ease-in-out;
+    &-primary {
+        background-color: #1e293b;
+        color: $white-color;
+        border: 2px solid #1e293b;
+    }
+    &-transparent {
+        background-color: $gray-color;
+    }
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.hr {
+    position: relative;
+    padding: 50px;
+}
+.hr::before {
+    position: absolute;
+    content: "∿∿∿";
+    font-size: 1.5rem;
+    line-height: 2rem;
+    right: 50%;
+    opacity: 0.3;
+}
+
+@media screen and (max-width: 640px) {
+    .text-title {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0;
+        padding: 50px 0 30px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .button {
+        padding: 15px 30px;
+    }
+}

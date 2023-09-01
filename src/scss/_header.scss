@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    margin-bottom: 100px;
+    &__logo {
+        width: 48px;
+        height: 48px;
+        object-fit: cover;
+        border-radius: 100rem;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        font-size: 18px;
+    }
+    &__link {
+        color: $black-color;
+        &-active {
+            border-bottom: 2px solid #3c82f6;
+        }
+    }
+    &__dark-mode {
+        display: flex;
+        align-items: center;
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        justify-content: center;
+        background-color: $gray-color;
+        border-radius: 100rem;
+        cursor: pointer;
+        border: 2px solid transparent;
+        outline: none;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+            border: 2px solid $black-color;
+            scale: 1.1;
+        }
+    }
+}

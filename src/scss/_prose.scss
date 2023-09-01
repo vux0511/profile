@@ -1,0 +1,28 @@
+.prose {
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding-bottom: 30px;
+    }
+    &__heading {
+        flex: 1;
+        font-size: 43px;
+        font-weight: 600;
+        line-height: 1.5;
+        span {
+            color: #3c82f6;
+        }
+    }
+    &__image {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 100rem;
+    }
+    &__button {
+        display: flex;
+        gap: 20px;
+    }
+}
