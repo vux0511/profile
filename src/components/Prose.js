@@ -11,8 +11,10 @@ function Prose() {
                 <img src={ImgLogo} alt="" className="prose__image" />
             </div>
             <div className="prose__button">
-                <button className="button button-primary">Read the blog</button>
-                <button className="button button-transparent">
+                <button className="button button-primary button-full">
+                    Read the blog
+                </button>
+                <button className="button button-transparent button-full">
                     More about me
                 </button>
             </div>

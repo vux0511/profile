@@ -11,15 +11,7 @@ function About() {
             <div className="about__introduce">
                 <p className="about__info">
                     I’m Hoàng Văn Vũ, a software engineer, full-stack developer.
-                    I am a Vietnamese{" "}
-                    <span>
-                        <img
-                            src={FlagVietNam}
-                            alt="Flag Vietnam"
-                            className="about__flag-vietnam"
-                        />
-                    </span>{" "}
-                    , living in Danang City.
+                    I am a Vietnamese , living in Danang City.
                 </p>
                 <p className="about__info">
                     I'm currently studying at Vietnam - Korea University of
@@ -106,7 +98,7 @@ function About() {
                         </Link>
                         .
                     </p>
-                    <button className="button about__button button-primary">
+                    <button className="button about__button button-primary button-full">
                         View My Resume
                     </button>
                 </div>

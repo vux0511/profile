@@ -6,26 +6,17 @@
         line-height: 1;
         padding: 30px 0 50px;
         line-height: 1.4;
-        span {
-            display: block;
-        }
     }
     &__introduce {
         color: $gray-color;
         font-size: 18px;
         p {
-            display: flex;
             text-transform: none;
         }
     }
     &__info {
         margin: 20px 0;
-        display: flex;
-        align-items: center;
-    }
-    &__flag-vietnam {
-        width: 35px;
-        margin: 0 5px;
+        line-height: 1.8;
     }
     &__image {
         border-radius: 0 10px 10px 0px;
@@ -69,6 +60,40 @@
         &-line::before {
             content: "- - - - - - - - - - - - - - -";
             opacity: 0.3;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .about {
+        &__title {
+            font-size: 28px;
+        }
+        &__education {
+            padding-top: 80px;
+            &-title {
+                font-size: 28px;
+            }
+            &-line::before {
+                content: "";
+                opacity: 0.3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .about {
+        &__technology {
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__image,
+        &__technology-info {
+            width: 100%;
+        }
+        &__image {
+            border-radius: 10px;
         }
     }
 }
