@@ -5,7 +5,6 @@
     padding: 25px 0;
     margin-bottom: 30px;
     z-index: 100;
-
     &__logo {
         width: 52px;
         height: 52px;
@@ -19,20 +18,35 @@
         display: flex;
         align-items: center;
         gap: 70px;
-        font-size: 20px;
+        font-size: 18px;
     }
     &__item {
         position: relative;
     }
     &__link {
         color: $gray-color;
-        &-active {
-            border-bottom: 2px solid $blue-color;
+        &:hover::after {
+            width: 100%;
+        }
+        &:hover {
             color: $black-color;
         }
     }
+    &__link::after {
+        position: absolute;
+        bottom: -2px;
+        content: "";
+        display: block;
+        width: 0;
+        height: 2.5px;
+        background: $blue-color;
+        transition: width 0.3s;
+    }
 }
-
+.active {
+    border-bottom: 2.5px solid $blue-color;
+    color: $black-color;
+}
 .menu-toggle,
 .menu-close {
     font-size: 24px;
@@ -95,6 +109,9 @@
         &__link {
             margin-bottom: 30px;
             font-size: 17px;
+            &:hover::after {
+                width: 0%;
+            }
         }
     }
     .menu-toggle,

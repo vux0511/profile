@@ -1,0 +1,34 @@
+[
+    {
+        "key": "1",
+        "name": "Portfolio",
+        "desc": "This is a website I made to display my background, skills, and projects.",
+        "github": "https://github.com/vux0511/profile",
+        "preview": "https://github.com/vux0511/profile",
+        "image": "https://res.cloudinary.com/dmcb19udq/image/upload/v1693642087/Portfolio.png"
+    },
+    {
+        "key": "2",
+        "name": "NFT Marketplace",
+        "desc": "This is a website about the nft trading floor that is gradually being completed in the near future",
+        "github": "https://github.com/vux0511/nft",
+        "preview": "https://nft-vux1512.vercel.app/",
+        "image": "https://res.cloudinary.com/dmcb19udq/image/upload/v1693642093/nft.png"
+    },
+    {
+        "key": "3",
+        "name": "ShoeStore",
+        "desc": "This is a shoe selling website built with Reactjs and an API written in PHP with quite complete functionality for sales website.",
+        "github": "https://github.com/vux0511/DACN1",
+        "preview": "https://dacn1-vux.vercel.app/",
+        "image": "https://res.cloudinary.com/dmcb19udq/image/upload/v1693642088/Shoe.png"
+    },
+    {
+        "key": "4",
+        "name": "ShoeStore",
+        "desc": "This is a phone sales website built with HTML, CSS and PHP. Website built in 2021",
+        "github": "https://github.com/vux0511/webdt",
+        "preview": "https://github.com/vux0511/webdt",
+        "image": "https://res.cloudinary.com/dmcb19udq/image/upload/v1693642090/Phone.png"
+    }
+]

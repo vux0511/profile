@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
-import ImgPortfolio from "../assets/Portfolio.png";
-import ImgShoe from "../assets/Shoe.png";
-import ImgPhone from "../assets/Phone.png";
-import ImgNft from "../assets/Nft.png";
+import { Link } from "react-router-dom";
 import { PiGithubLogo } from "react-icons/pi";
 import { AiOutlineLink } from "react-icons/ai";
-import { FiArrowRight } from "react-icons/fi";
+import data from "../data/projects.json";
 
 function Projects() {
     return (
@@ -16,97 +14,41 @@ function Projects() {
                 A selection of my favorite <span>works.</span>
             </h1>
             <div className="projects__wrapper">
-                <div className="projects__item">
-                    <div className="projects__info">
-                        <div className="projects__name about__education-title">
-                            Portfolio
+                {data.map((projects) => (
+                    <div className="projects__item" key={projects.key}>
+                        <div className="projects__info">
+                            <div className="projects__name about__education-title">
+                                {projects.name || <Skeleton />}
+                            </div>
+                            <div className="projects__desc">
+                                {projects.desc}
+                            </div>
+                            <div className="projects__link">
+                                <Link
+                                    target={"_blank"}
+                                    to={projects.preview}
+                                    className="projects__preview"
+                                >
+                                    Preview <PiGithubLogo />
+                                </Link>
+                                <Link
+                                    target={"_blank"}
+                                    to={projects.github}
+                                    className="projects__github"
+                                >
+                                    Github <AiOutlineLink />
+                                </Link>
+                            </div>
                         </div>
-                        <div className="projects__desc">
-                            This is a website I made to display my background,
-                            skills, and projects.
-                        </div>
-                        <div className="projects__link">
-                            <Link to={"/"} className="projects__preview">
-                                Preview <PiGithubLogo />
-                            </Link>
-                            <Link to={"/"} className="projects__github">
-                                Github <AiOutlineLink />
-                            </Link>
-                        </div>
+                        <img
+                            src={projects.image || <Skeleton count={10} />}
+                            alt=""
+                            className="projects__image"
+                        />
                     </div>
-                    <img
-                        src={ImgPortfolio}
-                        alt=""
-                        className="projects__image"
-                    />
-                </div>
-                <div className="projects__item">
-                    <div className="projects__info">
-                        <div className="projects__name about__education-title">
-                            NFT Marketplace
-                        </div>
-                        <div className="projects__desc">
-                            This is a website about the nft trading floor that
-                            is gradually being completed in the near future
-                        </div>
-                        <div className="projects__link">
-                            <Link to={"/"} className="projects__preview">
-                                Preview <PiGithubLogo />
-                            </Link>
-                            <Link to={"/"} className="projects__github">
-                                Github <AiOutlineLink />
-                            </Link>
-                        </div>
-                    </div>
-                    <img src={ImgNft} alt="" className="projects__image" />
-                </div>
-                <div className="projects__item">
-                    <div className="projects__info">
-                        <div className="projects__name about__education-title">
-                            ShoeStore
-                        </div>
-                        <div className="projects__desc">
-                            This is a shoe selling website built with Reactjs
-                            and an API written in PHP with quite complete
-                            functionality for sales website.
-                        </div>
-                        <div className="projects__link">
-                            <Link to={"/"} className="projects__preview">
-                                Preview <PiGithubLogo />
-                            </Link>
-                            <Link to={"/"} className="projects__github">
-                                Github <AiOutlineLink />
-                            </Link>
-                        </div>
-                    </div>
-                    <img src={ImgShoe} alt="" className="projects__image" />
-                </div>
-                <div className="projects__item">
-                    <div className="projects__info">
-                        <div className="projects__name about__education-title">
-                            PhoneStore
-                        </div>
-                        <div className="projects__desc">
-                            This is a phone sales website built with HTML, CSS
-                            and PHP. Website built in 2021
-                        </div>
-                        <div className="projects__link">
-                            <Link to={"/"} className="projects__preview">
-                                Preview <PiGithubLogo />
-                            </Link>
-                            <Link to={"/"} className="projects__github">
-                                Github <AiOutlineLink />
-                            </Link>
-                        </div>
-                    </div>
-                    <img src={ImgPhone} alt="" className="projects__image" />
-                </div>
-                <div className="projects__item">
-                    <button className="button button-primary projects__button">
-                        View more on Github <FiArrowRight />
-                    </button>
-                </div>
+                ))}
             </div>
+            <div className="hr"></div>
         </section>
     );
 }

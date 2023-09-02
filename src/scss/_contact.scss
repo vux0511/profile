@@ -1,0 +1,25 @@
+.contact {
+    background-color: #f8fafc;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgb(229 231 235);
+    &__title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 25px;
+        font-weight: 500;
+        padding-bottom: 20px;
+        span {
+            color: #fde047;
+        }
+    }
+    &__desc {
+        color: $gray-color;
+        font-size: 17px;
+    }
+}
+.mailto {
+    padding-left: 4px;
+    border-bottom: 1px solid $gray-600;
+}

@@ -37,70 +37,32 @@ function About() {
                     <p>
                         Technologies and tools I'm currently exploring and
                         intersted about{" "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
-                            React
-                        </Link>
-                        , {"  "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
-                            Next.js
-                        </Link>
-                        , {"  "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
+                        <span className="about__link-framework"> React</span> ,
+                        <span className="about__link-framework"> Next.js</span>,
+                        <span className="about__link-framework">
                             TailwindCSS
-                        </Link>
-                        , {"  "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
+                        </span>{" "}
+                        ,
+                        <span className="about__link-framework">
                             Typescript
-                        </Link>
-                        , {"  "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
-                            Nodejs
-                        </Link>
+                        </span>{" "}
+                        ,<span className="about__link-framework">Nodejs</span>{" "}
+                        ,...
                     </p>
                     <p>
                         You can find me on Github where I share tech-related
                         tidbits and build in public. You also can connect with
                         me through{" "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
-                            Facebook{" "}
-                        </Link>{" "}
-                        or{" "}
-                        <Link
-                            className="about__link"
-                            target={"_blank"}
-                            to="https://react.dev/"
-                        >
-                            Instagram{" "}
-                        </Link>
+                        <span className="about__link-framework">Facebook </span>
+                        or
+                        <span className="about__link-framework">Instagram</span>
                         .
                     </p>
-                    <button className="button about__button button-primary button-full">
-                        View My Resume
-                    </button>
+                    <Link to={"/"}>
+                        <button className="button button-primary button-full about__button">
+                            View My Resume
+                        </button>
+                    </Link>
                 </div>
             </div>
             <div className="about__education">
