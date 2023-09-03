@@ -1,6 +1,3 @@
-import Skeleton from "react-loading-skeleton";
-import "react-loading-skeleton/dist/skeleton.css";
-
 import { Link } from "react-router-dom";
 import { PiGithubLogo } from "react-icons/pi";
 import { AiOutlineLink } from "react-icons/ai";
@@ -18,7 +15,7 @@ function Projects() {
                     <div className="projects__item" key={projects.key}>
                         <div className="projects__info">
                             <div className="projects__name about__education-title">
-                                {projects.name || <Skeleton />}
+                                {projects.name}
                             </div>
                             <div className="projects__desc">
                                 {projects.desc}
@@ -41,7 +38,7 @@ function Projects() {
                             </div>
                         </div>
                         <img
-                            src={projects.image || <Skeleton count={10} />}
+                            src={projects.image}
                             alt=""
                             className="projects__image"
                         />

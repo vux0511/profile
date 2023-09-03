@@ -1,0 +1,15 @@
+.dark-theme {
+    background-color: #101827;
+    color: #ffffff;
+    * {
+        color: #ffffff;
+        background-color: #101827;
+        &:hover {
+            color: #f1f5f9;
+            background-color: #101827;
+        }
+    }
+}
+
+.light-theme {
+}
