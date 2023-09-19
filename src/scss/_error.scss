@@ -1,0 +1,25 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    &__image {
+        width: 400px;
+        object-fit: cover;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    &__desc {
+        max-width: 400px;
+        text-align: center;
+        line-height: 1.6;
+    }
+    &__back {
+        background-color: $blue-color;
+        outline: none;
+        border: none;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+}

@@ -4,22 +4,24 @@ import { BsMoonStars, BsSun } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
-    const [theme, setTheme] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(
+        localStorage.getItem("darkMode") === "true"
+    );
 
     useEffect(() => {
-        if (theme === true) {
-            document.body.classList.add("dark-theme");
-            document.body.classList.remove("light-theme");
+        localStorage.setItem("darkMode", isDarkMode);
+        if (isDarkMode) {
+            document.body.classList.add("dark-mode");
         } else {
-            document.body.classList.add("light-theme");
-            document.body.classList.remove("dark-theme");
+            document.body.classList.remove("dark-mode");
         }
-    }, [theme]);
+    }, [isDarkMode]);
 
-    const handleDarkMode = () => {
-        setTheme(!theme);
+    const toggleDarkMode = () => {
+        setIsDarkMode(!isDarkMode);
     };
 
     function handleToggleMenu() {
@@ -42,7 +44,9 @@ function Header() {
 
     return (
         <section className="header">
-            <img src={ImgLogo} alt="Logo" className="header__logo" />
+            <Link to={"/"}>
+                <img src={ImgLogo} alt="Logo" className="header__logo" />
+            </Link>
             <ul className="header__menu">
                 <li className="header__item ">
                     <NavLink className="header__link" to={"/"}>
@@ -68,17 +72,17 @@ function Header() {
                 <li className="header__item">
                     <button
                         className="button button-icon button__toggle-mobile"
-                        onClick={handleDarkMode}
+                        onClick={toggleDarkMode}
                     >
-                        {theme ? <BsSun /> : <BsMoonStars />}
+                        {isDarkMode ? <BsSun /> : <BsMoonStars />}
                     </button>
                 </li>
             </ul>
             <button
                 className="button button-icon button__toggle-desktop"
-                onClick={handleDarkMode}
+                onClick={toggleDarkMode}
             >
-                {theme ? <BsSun /> : <BsMoonStars />}
+                {isDarkMode ? <BsSun /> : <BsMoonStars />}
             </button>
             <RxHamburgerMenu
                 className="menu-toggle"

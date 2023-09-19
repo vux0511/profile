@@ -13,6 +13,9 @@
         border: 2px solid $blue-color;
         padding: 3px;
         flex-shrink: 0;
+        &:hover {
+            animation: spinner 1.5s infinite linear;
+        }
     }
     &__menu {
         display: flex;
@@ -123,5 +126,14 @@
     }
     .button__toggle-mobile {
         display: block;
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
