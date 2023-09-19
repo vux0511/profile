@@ -4,7 +4,7 @@
         "name": "Portfolio",
         "desc": "This is a website I made to display my background, skills, and projects.",
         "github": "https://github.com/vux0511/profile",
-        "preview": "https://github.com/vux0511/profile",
+        "preview": "https://vux0511-profile.vercel.app/",
         "image": "https://res.cloudinary.com/dmcb19udq/image/upload/v1693642087/Portfolio.png"
     },
     {
