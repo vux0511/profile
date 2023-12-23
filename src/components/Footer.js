@@ -64,20 +64,26 @@ function Footer() {
                 <li className="footer__item">
                     <div className="footer__title">SOCIAL</div>
                     <div className="footer__social">
-                        <div className="footer__link">
+                        <a
+                            href="https://www.facebook.com/Vuxxxxx/"
+                            className="footer__link"
+                        >
                             <img
                                 src={IconFacebook}
                                 alt=""
                                 className="footer__image-social"
                             />
-                        </div>
-                        <div className="footer__link">
+                        </a>
+                        <a
+                            href="https://www.instagram.com/vux0511/"
+                            className="footer__link"
+                        >
                             <img
                                 src={IconInstagram}
                                 alt=""
                                 className="footer__image-social"
                             />
-                        </div>
+                        </a>
                         <div className="footer__link">
                             <img
                                 src={IconX}

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import ImgLogo from "../assets/vu-ne.jpeg";
+import VuxImage from "../assets/vux-ne.jpeg";
 import FlagVietNam from "../assets/flag_vietnam.png";
 
 function About() {
@@ -32,7 +33,11 @@ function About() {
                 </p>
             </div>
             <div className="about__technology">
-                <img src={ImgLogo} alt="HoangVanVu" className="about__image" />
+                <img
+                    src={VuxImage}
+                    alt="HoangVanVu Image"
+                    className="about__image"
+                />
                 <div className="about__technology-info">
                     <p>
                         Technologies and tools I'm currently exploring and

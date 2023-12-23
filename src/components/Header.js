@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Header() {
+    const [scrolled, setScrolled] = useState(false);
+
     const [isDarkMode, setIsDarkMode] = useState(
         localStorage.getItem("darkMode") === "true"
     );
@@ -28,10 +30,10 @@ function Header() {
         const menuToggle = document.querySelector(".menu-toggle");
         const menuClose = document.querySelector(".menu-close");
         const menu = document.querySelector(".header__menu");
+
         if (!menuToggle || !menu || !menuClose) return;
-        menuToggle.addEventListener("click", function () {
-            menu.classList.add("is-active");
-        });
+
+        menuToggle.addEventListener("click", menu.classList.add("is-active"));
         menuClose.addEventListener("click", function () {
             menu.classList.remove("is-active");
         });
@@ -42,8 +44,21 @@ function Header() {
         });
     }
 
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 200) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <section className="header">
+        <section className={`header ${scrolled ? "sticky-header header" : ""}`}>
             <Link to={"/"}>
                 <img src={ImgLogo} alt="Logo" className="header__logo" />
             </Link>

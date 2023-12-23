@@ -5,6 +5,7 @@
     padding: 25px 0;
     margin-bottom: 30px;
     z-index: 100;
+    background-color: $background;
     &__logo {
         width: 52px;
         height: 52px;
@@ -135,5 +136,22 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    animation: stickyHeader 0.3s ease forwards;
+    z-index: 100;
+    background-color: $background;
+}
+
+@keyframes stickyHeader {
+    0% {
+        transform: translateY(-70px);
+    }
+    100% {
+        transform: translateY(0px);
     }
 }
